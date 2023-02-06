@@ -7,42 +7,66 @@
 body {
   height: 100vh;
   display: flex;
-  background: #060AB2;
+  background: #b676b744;
 }
 
-.memory-game {
+
+.wrapper {
   width: 640px;
-  height: 640px;
+  height: 550px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
 }
-.memory-card {
+.cards {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
 }
-.memory-card:active {
+.cards:active {
   transform: scale(0.97);
   transition: transform .2s;
 }
-.memory-card.flip {
+.cards.flip {
   transform: rotateY(180deg);
 }
 
-.front-face,
+.front-view,
 .back-face {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0px;
   position: absolute;
-  border-radius: 5px;
-  background: #1C7CCC;
+  border-radius: 8px;
+  background-color: transparent;
   backface-visibility: hidden;
+}
+.front-view {
+  transform: rotateY(180deg);
+}
+.cards.shake{
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translateX(13px);
+  }
+  60%{
+    transform: translateX(-8px);
+  }
+  80%{
+    transform: translateX(8px);
+  }
 }
