@@ -1,59 +1,58 @@
-const cards = document.querySelectorAll(".card");
-let matched = 0;
-let cardOne, cardTwo;
-let disableDeck = false;
-function flipCard({target: clickedCard}) {
-    if(cardOne !== clickedCard && !disableDeck) {
-        clickedCard.classList.add("flip");
-        if(!cardOne) {
-            return cardOne = clickedCard;
-        }
-        cardTwo = clickedCard;
-        disableDeck = true;
-        let cardOneImg = cardOne.querySelector(".back-view img").src,
-        cardTwoImg = cardTwo.querySelector(".back-view img").src;
-        matchCards(cardOneImg, cardTwoImg);
-    }
-}
-function matchCards(img1, img2) {
-    if(img1 === img2) {
-        matched++;
-        if(matched == 8) {
-            setTimeout(() => {
-                return shuffleCard();
-            }, 1000);
-        }
-        cardOne.removeEventListener("click", flipCard);
-        cardTwo.removeEventListener("click", flipCard);
-        cardOne = cardTwo = "";
-        return disableDeck = false;
-    }
-    setTimeout(() => {
-        cardOne.classList.add("shake");
-        cardTwo.classList.add("shake");
-    }, 400);
-    setTimeout(() => {
-        cardOne.classList.remove("shake", "flip");
-        cardTwo.classList.remove("shake", "flip");
-        cardOne = cardTwo = "";
-        disableDeck = false;
-    }, 1200);
-}
-function shuffleCard() {
-    matched = 0;
-    disableDeck = false;
-    cardOne = cardTwo = "";
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
-    cards.forEach((card, i) => {
-        card.classList.remove("flip");
-        let imgTag = card.querySelector(".back-view img");
-        imgTag.src = `images/img-${arr[i]}.png`;
-        card.addEventListener("click", flipCard);
-    });
-}
-shuffleCard();
-    
-cards.forEach(card => {
-    card.addEventListener("click", flipCard);
-});
+const cards = document.querySelectorAll('.memory-card');
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+
+function flipCard() {
+	if (lockBoard) return;
+	if (this === firstCard) return;
+	this.classList.add('flip');
+
+	if (!hasFlippedCard) {
+	  hasFlippedCard = true;
+	  firstCard = this;
+	  return;
+	}
+ 
+	secondCard = this;
+	
+ 
+	checkForMatch();
+  }
+ 
+  function checkForMatch() {
+	let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+ 	isMatch ? disableCards() : unflipCards();
+  }
+ 
+  function disableCards() {
+	firstCard.removeEventListener('click', flipCard);
+	secondCard.removeEventListener('click', flipCard);
+
+	resetBoard();
+  }
+ 
+  function unflipCards() {
+	lockBoard = true;
+	setTimeout(() => {
+	  firstCard.classList.remove('flip');
+	  secondCard.classList.remove('flip');
+	  resetBoard();
+	}, 1500);
+
+  }
+
+  function resetBoard() {
+	[hasFlippedCard, lockBoard] = [false, false];
+	[firstCard, secondCard] = [null, null];
+  }
+
+  (function shuffle() {
+	cards.forEach(card => {
+	  let ramdomPos = Math.floor(Math.random() * 12);
+	  card.style.order = ramdomPos;
+	});
+  })();
+
+cards.forEach(card => card.addEventListener('click', flipCard));

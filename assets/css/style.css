@@ -11,7 +11,7 @@ body {
 }
 
 
-.wrapper {
+.memory-game {
   width: 640px;
   height: 550px;
   margin: auto;
@@ -19,7 +19,7 @@ body {
   flex-wrap: wrap;
   perspective: 1000px;
 }
-.cards {
+.memory-card {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   margin: 5px;
@@ -29,15 +29,15 @@ body {
   transform-style: preserve-3d;
   transition: transform .5s;
 }
-.cards:active {
+.memory-card:active {
   transform: scale(0.97);
   transition: transform .2s;
 }
-.cards.flip {
+.memory-card.flip {
   transform: rotateY(180deg);
 }
 
-.front-view,
+.front-face,
 .back-face {
   width: 100%;
   height: 100%;
@@ -47,10 +47,10 @@ body {
   background-color: transparent;
   backface-visibility: hidden;
 }
-.front-view {
+.front-face {
   transform: rotateY(180deg);
 }
-.cards.shake{
+.memory-card.shake{
   animation: shake 0.35s ease-in-out;
 }
 @keyframes shake {
