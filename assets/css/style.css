@@ -9,11 +9,26 @@ body {
   display: flex;
   background: #b676b744;
 }
+.page-title {
+  color:blueviolet;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  text-align: center;
+  font-size: 4em;
+}
+.game-info {
+  color:blueviolet;
+  font-size: 2em;
+}
 
+
+
+
+/* gae function */
 
 .memory-game {
   width: 640px;
-  height: 550px;
+  height: 500px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -33,6 +48,7 @@ body {
   transform: scale(0.97);
   transition: transform .2s;
 }
+
 .memory-card.flip {
   transform: rotateY(180deg);
 }

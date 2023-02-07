@@ -16,10 +16,24 @@
     <title>Memory Game</title>
 
 <body>
+ <!-- <button onclick="myFunction()" class="button">Start</button> -->
+ <h1 class="page-title">Memory game</h1>
  
+  <div class="game-info-container">
+    <div onclick="flipcard()" class="game-info">
+      <span class="timer">Timer 0:00</span>
+    </div>
+    <div class="game-info"> Moves
+      <span class="moves">0</span>
+    </div>
+  </div>
+ 
+
+
+
   
   
-    <section class="wrapper">
+    <section class="memory-game">
         <div class="memory-card" data-framework="react">
           <img class="front-face" src="assets/images/img-1.png" alt="React">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
