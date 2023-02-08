@@ -8,7 +8,7 @@
     <!-- font awesome and google fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
     
@@ -16,128 +16,77 @@
     <title>Memory Game</title>
 
 <body>
- <!-- <button onclick="myFunction()" class="button">Start</button> -->
- <h1 class="page-title">Alien Memory</h1>
- <!-- Memory game grid -->
- <div class="game-container">
-   <div class="game-info-container">
-     <div onclick="flipcard()" class="game-info">
-       <span class="timer">Timer 0:00</span>
-     </div>
-     <div class="game-info"> Moves
-       <span class="moves">0</span>
-     </div>
-   </div>
+ 
+
+  <div class="wrapper">
+    <div class="memory-game">
+        <div class="memory-card" data-framework="react">
+          <img class="front-face" src="assets/images/img-1.png" alt="React">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="react">
+          <img class="front-face" src="assets/images/img-1.png" alt="React">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="angular">
+          <img class="front-face" src="assets/images/img-2.png" alt="Angular">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="angular">
+          <img class="front-face" src="assets/images/img-2.png" alt="Angular">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="ember">
+          <img class="front-face" src="assets/images/img-3.png" alt="Ember">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="ember">
+          <img class="front-face" src="assets/images/img-3.png" alt="Ember">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="vue">
+          <img class="front-face" src="assets/images/img-4.png" alt="Vue">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="vue">
+          <img class="front-face" src="assets/images/img-4.png" alt="Vue">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="backbone">
+          <img class="front-face" src="assets/images/img-5.png" alt="Backbone">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="backbone">
+          <img class="front-face" src="assets/images/img-5.png" alt="Backbone">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="aurelia">
+          <img class="front-face" src="assets/images/img-6.png" alt="Aurelia">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      
+        <div class="memory-card" data-framework="aurelia">
+          <img class="front-face" src="assets/images/img-6.png" alt="Aurelia">
+          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
+        </div>
+      </div>
+      <div class="controls-container">
+        <p id="result"></p>
+        <button id="start">Start Game</button>
+      </div>
+    </div>
   
-    <section class="memory-game">
-        <div class="memory-card" data-framework="react">
-          <img class="front-face" src="assets/images/img-1.png" alt="React">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="react">
-          <img class="front-face" src="assets/images/img-1.png" alt="React">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="angular">
-          <img class="front-face" src="assets/images/img-2.png" alt="Angular">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="angular">
-          <img class="front-face" src="assets/images/img-2.png" alt="Angular">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="ember">
-          <img class="front-face" src="assets/images/img-3.png" alt="Ember">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="ember">
-          <img class="front-face" src="assets/images/img-3.png" alt="Ember">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="vue">
-          <img class="front-face" src="assets/images/img-4.png" alt="Vue">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="vue">
-          <img class="front-face" src="assets/images/img-4.png" alt="Vue">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="backbone">
-          <img class="front-face" src="assets/images/img-5.png" alt="Backbone">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="backbone">
-          <img class="front-face" src="assets/images/img-5.png" alt="Backbone">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="aurelia">
-          <img class="front-face" src="assets/images/img-6.png" alt="Aurelia">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      
-        <div class="memory-card" data-framework="aurelia">
-          <img class="front-face" src="assets/images/img-6.png" alt="Aurelia">
-          <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
-        </div>
-      </section>
-  <!-- Reset Game again -->
-  <div>
-    <button class="hero-btn" onclick="reset()">Reset Game</button> <button id="modalBtn" class="hero-btn">How to
-      Play</button>
-  </div>
-
-  <!--instructions Modal -->
-  <section>
-    <div class="instructions" id="instructions">
-      <div>
-        <div>
-          <h2 class="page-title">How to play:</h2>
-        </div>
-      </div>
-      <div>
-        <div class="rules-card">
-          <div class="card-body">
-            <ol class="rules-list">
-              <li>To begin the game, click on any card to flip it over</li>
-              <li>Only two cards at a time can be flipped</li>
-              <li>You need to find all 8 pairs to complete the game.</li>
-              <li>Restart the game and try beat your time or the number of moves taken!</li>
-            </ol>
-            <p class="good-luck"><strong>GOOD LUCK!</strong></p>
-          </div><span id="closeBtn" class="hero-btn">Play!</span>
-        </div>
-      </div>
-      <div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Win Message Modal -->
-  <section class="win-msg">
-    <div class="modal" id="modal">
-      <!-- modal content -->
-      <div class="modal-content">
-        <span id="close" class="close">&times;</span>
-        <h2>Well Done!</h2>
-        <br>
-        <p>You have won!</p>
-        <p>You made <span id="finalMove"> </span> moves </p>
-        <p>in the <span id="totalTime"> </span> </p>
-        <img class="modal-img" src="./assets/images/thumbs-up.png" alt="Thumbs up smiley face">
-      </div>
-    </div>
-  </section>
-
+  
 
 
 
