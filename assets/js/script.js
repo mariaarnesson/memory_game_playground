@@ -1,8 +1,10 @@
 const cards = document.querySelectorAll('.memory-card');
+const moveContainer = document.querySelector(".moves");
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let moves = 0;
 
 function flipCard() {
   if (lockBoard) return;
@@ -54,7 +56,7 @@ moveContainer.innerHtml = 0;
 function addMove() {
     moves++;
     moveContainer.innerHTML = moves;
-timer();
+
 }
 
 

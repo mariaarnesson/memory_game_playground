@@ -7,7 +7,24 @@
 body {
   height: 100vh;
   display: flex;
-  background: #b676b744;
+  background-image: url(../images/background.jpg);
+}
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/background.jpg);
+  top: 0;
+}
+.game-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 0.6em;
 }
 
 .page-title {
@@ -35,7 +52,18 @@ body {
 
 
 /* gae function */
-
+.wrapper {
+  box-sizing: content-box;
+  width: 41.87em;
+  padding: 2.5em 3em;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+}
 .memory-game {
   width: 640px;
   height: 500px;
@@ -57,10 +85,12 @@ body {
 .memory-card:active {
   transform: scale(0.97);
   transition: transform .2s;
+
 }
 
 .memory-card.flip {
   transform: rotateY(180deg);
+ 
 }
 
 .front-face,
@@ -75,10 +105,12 @@ body {
 }
 .front-face {
   transform: rotateY(180deg);
+ 
 }
 
 .memory-card.shake{
   animation: shake 0.35s ease-in-out;
+ 
 }
 @keyframes shake {
   0%, 100%{
@@ -98,6 +130,20 @@ body {
   }
 }
 /* How to play instructions */
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
 
 .instructions {
   display: none;
