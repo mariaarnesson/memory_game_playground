@@ -55,12 +55,16 @@ function flipCard() {
   secondCard = this;
  hasFlippedCard = false;
 
-  checkForMatch();
+  mached();
 }
 
-function checkForMatch() {
-  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-  isMatch ? disableCards() : unflipCards();
+
+function matched(){
+  firstCard[0].classList.add("match", "disabled");
+  secondCard[1].classList.add("match", "disabled");
+  firstCard[0].classList.remove(unflipCards);
+  secondCard[1].classList.remove(unflipCards);
+  resetBoard();
 }
 
 function disableCards() {

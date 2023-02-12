@@ -98,6 +98,19 @@ body {
   transform: rotateY(180deg);
  
 }
+.memory-card.match {
+	cursor: default;
+	background: #c5f005c9;
+	font-size: 33px;
+	animation-name: rubberBand;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+}
+.memory-card.disabled {
+	pointer-events: none;
+	opacity: 0.9;
+}
 
 .front-face,
 .back-face {
