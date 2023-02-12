@@ -16,14 +16,20 @@
     <title>Memory Game</title>
 
 <body>
- 
+ <div>
+  <button onclick="startPage()"> Start Page </button>
+<div id="start">
+    <h2>Memory Game</h2>
+    <button>Start Game</button>
+</div>
+ </div>
   <div class="game-container">
  <div class="wrapper">
   <div class="game-info">Moves
     <span class="moves">0</span>
   </div>
   <div onclick="flipcard()" class="game-info">
-    <span class="timer">Timer 0:00</span>
+    <div id="time"class="stats-container"></div>
   </div>
     <div class="memory-game">
         <div class="memory-card" data-framework="react">

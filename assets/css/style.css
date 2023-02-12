@@ -9,6 +9,12 @@ body {
   display: flex;
   background-image: url(../images/background.jpg);
 }
+#start {
+  width: 1000px;
+  height: 600px;
+  background-color: #fff;
+  display: none;
+}
 .controls-container {
   position: absolute;
   display: flex;
