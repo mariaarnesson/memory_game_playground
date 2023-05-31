@@ -80,8 +80,8 @@ body {
   perspective: 1000px;
 }
 .memory-card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
+  width: calc(20% - 9px);
+  height: calc(20% - -30px);
   margin: 5px;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
