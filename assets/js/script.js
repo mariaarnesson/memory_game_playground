@@ -1,6 +1,6 @@
 const cards = document.querySelectorAll('.memory-card');
 const counter = document.querySelector(".moves");
-
+const matchSound = document.getElementById("matchSound");
   let hasFlippedCard = false;
   let lockBoard = false;
   let firstCard, secondCard;
@@ -8,6 +8,11 @@ const counter = document.querySelector(".moves");
   var second = 0, minute = 0; hour = 0;
   var timer = document.querySelector(".timer");
   var interval;
+
+  function playMatchSound() {
+    matchSound.currentTime = 0; // Reset the sound to the beginning
+    matchSound.play();
+  }
 
   function flipCard() {
     if (lockBoard) return;
@@ -37,6 +42,7 @@ const counter = document.querySelector(".moves");
     secondCard.removeEventListener('click', flipCard);
 
     resetBoard();
+    playMatchSound();
 
     if (document.querySelectorAll('.memory-card.flip').length === cards.length) {
       displayGameOverModal();
@@ -105,16 +111,7 @@ const counter = document.querySelector(".moves");
   function displayGameOverModal() {
     clearInterval(interval); // Stop the timer
   
-    const finalMoves = document.querySelector("#finalMoves");
-    finalMoves.textContent = moves;
-  
-    const finalTime = document.querySelector("#finalTime");
-    finalTime.textContent = timer.innerHTML;
-  
-    const modal = document.getElementById("gameOverModal");
-    modal.style.display = "block";
-  
-    const closeBtn = document.getElementsByClassName("close")[0];
+    
     closeBtn.onclick = function() {
       modal.style.display = "none";
     }
