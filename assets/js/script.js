@@ -4,7 +4,10 @@ const counter = document.querySelector(".moves");
   let hasFlippedCard = false;
   let lockBoard = false;
   let firstCard, secondCard;
-  let moves = 0
+  let moves = 0;
+  var second = 0, minute = 0; hour = 0;
+  var timer = document.querySelector(".timer");
+  var interval;
 
   function flipCard() {
     if (lockBoard) return;
@@ -45,6 +48,32 @@ const counter = document.querySelector(".moves");
     }, 1500);
     moveCounter();
   }
+
+  function moveCounter() {
+      moves++;
+      counter.innerHTML = moves;
+      if(moves == 1){
+        second = 0;
+        minute = 0;
+        hour = 0;
+        startTimer();
+      }
+  }
+
+  function startTimer(){
+    interval = setInterval(function(){
+        timer.innerHTML = minute+"mins "+second+"secs";
+        second++;
+        if(second == 60){
+            minute++;
+            second=0;
+        }
+        if(minute == 60){
+            hour++;
+            minute = 0;
+        }
+    },1000);
+}
 
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
