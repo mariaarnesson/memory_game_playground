@@ -74,7 +74,6 @@ const counter = document.querySelector(".moves");
         }
     },1000);
 }
-
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
