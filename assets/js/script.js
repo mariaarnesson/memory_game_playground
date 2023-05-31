@@ -37,6 +37,10 @@ const counter = document.querySelector(".moves");
     secondCard.removeEventListener('click', flipCard);
 
     resetBoard();
+
+    if (document.querySelectorAll('.memory-card.flip').length === cards.length) {
+      displayGameOverModal();
+    }
   }
 
   function unflipCards() {
@@ -72,11 +76,20 @@ const counter = document.querySelector(".moves");
             hour++;
             minute = 0;
         }
+       
     },1000);
 }
+
+
+
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
+
+    const modal = document.getElementById("gameOverModal");
+    if (modal.style.display === "block") {
+    modal.style.display = "none";
+  }
   }
 
  (function shuffle() {
@@ -87,3 +100,35 @@ const counter = document.querySelector(".moves");
  })();
 
   cards.forEach(card => card.addEventListener('click', flipCard));
+
+
+  function displayGameOverModal() {
+    clearInterval(interval); // Stop the timer
+  
+    const finalMoves = document.querySelector("#finalMoves");
+    finalMoves.textContent = moves;
+  
+    const finalTime = document.querySelector("#finalTime");
+    finalTime.textContent = timer.innerHTML;
+  
+    const modal = document.getElementById("gameOverModal");
+    modal.style.display = "block";
+  
+    const closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+  }
+
+ // function gameOver(){
+   // if (flipCard.length == 12){
+  //    clearInterval(interval);
+  //    finalTime = timer.innerHTML;
+
+      // show congratulations modal
+  //    modal.classList.add("show");
+
+  //    document.getElementById("finalMove").innerHTML = moves;
+  //    document.getElementById("totalTime").innerHTML = finalTime;
+ //   };
+ // }

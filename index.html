@@ -15,10 +15,10 @@
     
     <title>Memory Game</title>
 
-<div>
-    <button class="moves">0</button> <buton>Move(s)</buton>
-    <button class="timer"></button>
-</div>  
+<div class="game-panel">
+    <span class="moves" style="color:beige;">0</span><p style="color:beige;">Move(s)</p>
+    <div class="timer" style="color: beige;"></div>
+</div>
   
     <div class="memory-game">
         <div class="memory-card" data-framework="react">
@@ -81,6 +81,17 @@
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
     </div> 
+
+
+    <div id="gameOverModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Game Over!</h2>
+        <p>Congratulations! You completed the game.</p>
+        <p>Moves: <span id="finalMove"></span></p>
+        <p>Time: <span id="totalTime"></span></p>
+      </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
     
