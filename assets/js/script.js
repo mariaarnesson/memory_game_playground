@@ -91,11 +91,12 @@ const matchSound = document.getElementById("matchSound");
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-
-    const modal = document.getElementById("gameOverModal");
-    if (modal.style.display === "block") {
-    modal.style.display = "none";
   }
+
+  function gameOver() {
+    clearInterval(interval);
+    displayGameOverModal();
+
   }
 
  (function shuffle() {
@@ -109,12 +110,9 @@ const matchSound = document.getElementById("matchSound");
 
 
   function displayGameOverModal() {
-    clearInterval(interval); // Stop the timer
-  
-    
-    closeBtn.onclick = function() {
-      modal.style.display = "none";
-    }
+    finalTime = timer.innerHTML;
+    document.getElementById("finalMove").innerHTML = moves;
+    document.getElementById("totalTime").innerHTML = finalTime;
   }
 
  // function gameOver(){
