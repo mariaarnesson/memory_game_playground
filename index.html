@@ -18,45 +18,47 @@
 
   <div id="home">
     <h1> Memory Game! </h1>
+    <!--
     <input type="text" id="usernameInput" placeholder="Enter your username">
     <button onclick="logIn()">Log In</button>
+    -->
     <button onclick="startPage()"> Play Game </button>
+     <!-- Instruction modal-->
+     <button id="instructionButton">
+      <i class="fa-solid fa-sheet-plastic"></i>
+  </button>
+  
+  <!-- The Modal -->
+  <div id="myInstruction" class="instruction">
+  
+    <!-- Modal content -->
+    <div class="instruction-content">
+      <span class="close">&times;</span>
+                  <p>Test your memory with this memory game! You start 
+                  the game by choosing a card and finding another identical one. 
+                  You need to find all pairs. When you find all pairs, you have 
+                  completed this game.
+              </p>
+    </div>
+      </div>
   </div>
     <audio id="flipCardSound" src="assets/audio/mixkit-game-ball-tap-2073.wav"></audio>
     <audio id="matchSound" src="assets/audio/success-1-6297.mp3"></audio>
+    <auto id="gameoverSound" src="assets/audio/mixkit-retro-arcade-lose-2027.wav"></auto>
 
 <section class="score-panel">
     <div class="game-panel">
-      
-    </br></br></br>
-      <h2 class="timer" style="color: beige;"></h2>
-      <h2 style="color:beige;">Moves: </h2>
-      <h2 class="moves" style="color:beige;">0    </h2>
-    </br>  
-      
-  </br>
-      <!-- Instruction modal-->
-      <button id="instructionButton">
-        <i class="fa-solid fa-sheet-plastic"></i>
-    </button>
+      <div onclick="startPage()">
+        <i class="fa-solid fa-backward" style="font-size: 3em;"></i>
+    </div>
     
-    <!-- The Modal -->
-    <div id="myInstruction" class="instruction">
-    
-      <!-- Modal content -->
-      <div class="instruction-content">
-        <span class="close">&times;</span>
-                    <p>Test your memory with this memory game! You start 
-                    the game by choosing a card and finding another identical one. 
-                    You need to find all pairs. When you find all pairs, you have 
-                    completed this game.
-                </p>
-      </div>
-        </div>
+      <span class="timer" style="color: beige;"></span>
+      <p style="color:beige;">Moves: </p>
+      <p class="moves" style="color:beige;">0</p>
   </div>
-  <div id="starIcon">
+  <span id="starIcon"></span>
   
-  </div>
+  
 </section>
 
     <div class="memory-game">
