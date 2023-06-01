@@ -25,10 +25,26 @@
     <audio id="flipCardSound" src="assets/audio/mixkit-game-ball-tap-2073.wav"></audio>
     <audio id="matchSound" src="assets/audio/success-1-6297.mp3"></audio>
 
-<section>
+<section class="score-panel">
     <div class="game-panel">
       <span class="moves" style="color:beige;">0</span><p style="color:beige;">Move(s)</p>
       <div class="timer" style="color: beige;"></div>
+      <div class="score-board">
+        
+        <span class="color-yellow" onclick="changeBackgroundYellow()">
+            <i class="fa-solid fa-droplet" style="color: #FFBA00;"></i>
+        </span>
+        <span class="color-blue" onclick="changeBackgroundBlue()">
+            <i class="fa-solid fa-droplet" style="color: rgb(125 180 222);"></i>
+        </span>
+        <span class="color-grey" onclick="changeBackgroundGrey()">
+            <i class="fa-solid fa-droplet" style="color: rgb(167 174 235);"></i>
+        </span>
+        <span class="color-white" onclick="changeBackgroundWhite()">
+            <i class="fa-solid fa-droplet" style="color: snow"></i> 
+        </span>
+        
+    </div>
       <!-- Instruction modal-->
       <button id="instructionButton">
         <i class="fa-solid fa-sheet-plastic"></i>

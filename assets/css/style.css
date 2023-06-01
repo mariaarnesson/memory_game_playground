@@ -16,6 +16,15 @@ h1 {
   font-size: 6em;
   color: tomato;
 }
+.score-panel {
+  left: 35%;
+  top: 6%;
+}
+.game-panel {
+  font-size: 2em;
+  display: inline-flex;
+  left: 50%;
+}
 #home {
   position: absolute;
   display: block;
