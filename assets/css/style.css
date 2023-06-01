@@ -73,8 +73,8 @@ h1 {
   perspective: 1000px;
 }
 .memory-card {
-  width: calc(20% - 9px);
-  height: calc(20% - -30px);
+  width: calc(29% - 6px);
+  height: calc(14% - -35px);
   margin: 5px;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
