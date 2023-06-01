@@ -25,16 +25,36 @@
     <audio id="flipCardSound" src="assets/audio/mixkit-game-ball-tap-2073.wav"></audio>
     <audio id="matchSound" src="assets/audio/success-1-6297.mp3"></audio>
 
-<div class="game-panel">
-    <span class="moves" style="color:beige;">0</span><p style="color:beige;">Move(s)</p>
-    <div class="timer" style="color: beige;"></div>
+<section>
+    <div class="game-panel">
+      <span class="moves" style="color:beige;">0</span><p style="color:beige;">Move(s)</p>
+      <div class="timer" style="color: beige;"></div>
+      <!-- Instruction modal-->
+      <button id="instructionButton">
+        <i class="fa-solid fa-sheet-plastic"></i>
+    </button>
     
-</div>
-<div id="starIcon">
-
-</div>
-
+    <!-- The Modal -->
+    <div id="myInstruction" class="instruction">
+    
+      <!-- Modal content -->
+      <div class="instruction-content">
+        <span class="close">&times;</span>
+                    <p>Test your memory with this memory game! You start 
+                    the game by choosing a card and finding another identical one. 
+                    You need to find all pairs. When you find all pairs, you have 
+                    completed this game.
+                </p>
+      </div>
+        </div>
+  </div>
+  <div id="starIcon">
+  
+  </div>
+</section>
+<section> 
     <div class="memory-game">
+      
         <div class="memory-card" data-framework="react">
           <img class="front-face" src="assets/images/img-1.png" alt="React">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
@@ -95,7 +115,7 @@
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
     </div> 
- 
+</section> 
 <!-- Game Over Modal -->
     <div id="gameOverModal" class="gameover">
       <div class="gameover-content">

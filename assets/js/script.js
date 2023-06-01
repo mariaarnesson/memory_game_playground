@@ -12,7 +12,37 @@ const modal = document.getElementById('gameOverModal');
   var timer = document.querySelector(".timer");
   var memoryGame = document.querySelector('.memory-game');
   var interval;
+  var instruction = document.getElementById("myInstruction");
+  var btn = document.getElementById("instructionButton");
+  var span = document.getElementsByClassName("close")[0];
 
+  btn.onclick = function() {
+    instruction.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    instruction.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      instruction.style.display = "none";
+    }
+  }
+
+  // Instruction function
+function gameInstruction() {
+  var x = document.getElementById("instruction");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+  // Home
   function startPage() {
     var home = document.getElementById("home");
     var endGameMessage = document.getElementById("endGameMessage");
@@ -29,10 +59,7 @@ const modal = document.getElementById('gameOverModal');
     }
   }
 
-  function logIn() {
-    const username = document.getElementById("usernameInput").value;
-   
-  }
+
 
   function playMatchSound() {
     matchSound.currentTime = 0; // Reset the sound to the beginning
@@ -172,13 +199,13 @@ const modal = document.getElementById('gameOverModal');
   cards.forEach(card => card.addEventListener('click', flipCard));
 
 
-  function displayGameOverModal(username) {
+  function displayGameOverModal() {
     modal.style.display = "block";
     finalTime = timer.innerHTML;
 
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
-    document.getElementById("username").innerHTML = 'Hi ${username} !'
+
     gameOver();
   }
 

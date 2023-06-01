@@ -39,19 +39,31 @@ h1 {
   background-image: url('https://img.freepik.com/free-vector/yes-no-concept-illustration_114360-7564.jpg?w=826&t=st=1685626796~exp=1685627396~hmac=919168a9a87316c7b83f10e5c13eec9c43cd3cf3f400ad129db5704c274e0128');
 
 }
-.wrapper{
-  box-sizing: content-box;
-  width: 45.87em;
-  height: 41em;
-  padding: 3.5em 3em;
-  background-color: #FFBA00;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border-radius: 8em;
-  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+/* instructions */
+.instruction {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
+
+/* Modal Content */
+.instruction-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
 .memory-game {
   width: 640px;
   height: 500px;
