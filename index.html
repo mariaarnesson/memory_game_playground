@@ -14,7 +14,12 @@
     
     
     <title>Memory Game</title>
+<body>
 
+  <div id="home">
+    <h1> Memory Game! </h1>
+    <button onclick="startPage()"> Play Game </button>
+  </div>
     <audio id="flipCardSound" src="assets/audio/mixkit-game-ball-tap-2073.wav"></audio>
     <audio id="matchSound" src="assets/audio/success-1-6297.mp3"></audio>
 
@@ -26,7 +31,7 @@
 <div id="starIcon">
 
 </div>
-  
+
     <div class="memory-game">
         <div class="memory-card" data-framework="react">
           <img class="front-face" src="assets/images/img-1.png" alt="React">
@@ -88,7 +93,7 @@
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
     </div> 
-
+ 
 <!-- Game Over Modal -->
     <div id="gameOverModal" class="gameover">
       <div class="gameover-content">

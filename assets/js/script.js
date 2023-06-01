@@ -11,6 +11,20 @@ const modal = document.getElementById('gameOverModal');
   var timer = document.querySelector(".timer");
   var interval;
 
+  function startPage() {
+    var home = document.getElementById("home");
+    var memoryGame = document.querySelector('.memory-game');
+
+    if (home.style.display === "none") {
+        home.style.display = "flex";
+        memoryGame.style.display = "none";
+    } else {
+        home.style.display = "none";
+        memoryGame.style.display = "flex";
+    
+    }
+  }
+
   function playMatchSound() {
     matchSound.currentTime = 0; // Reset the sound to the beginning
     matchSound.play();
@@ -21,6 +35,7 @@ const modal = document.getElementById('gameOverModal');
     flipCardSound.play();
   }
 
+  
   function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
