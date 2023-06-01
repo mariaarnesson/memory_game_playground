@@ -7,6 +7,7 @@ const modal = document.getElementById('gameOverModal');
   let lockBoard = false;
   let firstCard, secondCard;
   let moves = 0;
+  let elapsedTime = 0;
   var second = 0, minute = 0; hour = 0;
   var timer = document.querySelector(".timer");
   var interval;
@@ -27,7 +28,7 @@ const modal = document.getElementById('gameOverModal');
 
   function logIn() {
     const username = document.getElementById("usernameInput").value;
-    resetBoard(username)
+   
   }
 
   function playMatchSound() {
@@ -60,7 +61,7 @@ const modal = document.getElementById('gameOverModal');
     checkForMatch();
   }
 
-  function checkForMatch(username) {
+  function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? disableCards() : unflipCards();
    
@@ -111,9 +112,10 @@ const modal = document.getElementById('gameOverModal');
   }
 
   function startTimer(){
-    interval = setInterval(function(){
+    interval = setInterval(function() {
         timer.innerHTML = minute+"mins "+second+"secs";
         second++;
+        elapsedTime++;
         if(second == 60){
             minute++;
             second=0;
@@ -122,13 +124,24 @@ const modal = document.getElementById('gameOverModal');
             hour++;
             minute = 0;
         }
+
+        if (elapsedTime >= 120) {
+          endGame();
+        }
        
-    },1000);
-}
+      },1000);
+  }
 
+  function endGame() {
+    clearInterval(interval);
+    modal.style.display = "none"; // Hide the game over modal
+    home.style.display = "flex";
+    document.getElementById("gameOverMessage").innerHTML = "You lost! The game is now over!";
+    
 
+  }
 
-  function resetBoard(username) {
+  function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
   }
