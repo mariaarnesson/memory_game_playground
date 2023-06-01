@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.memory-card');
 const counter = document.querySelector(".moves");
 const matchSound = document.getElementById("matchSound");
 const flipCardSound = document.getElementById("flipCardSound");
+const gameOverSound = document.getElementById("gemaOverSound");
 const modal = document.getElementById('gameOverModal');
   let hasFlippedCard = false;
   let lockBoard = false;
@@ -88,6 +89,10 @@ function gameInstruction() {
   function playFlipCardSound() {
     flipCardSound.currentTime = 0;
     flipCardSound.play();
+  }
+  function playGameOverSound () {
+    gameOverSound.currentTime = 0;
+    gameOverSound.play();
   }
 
   
@@ -193,6 +198,7 @@ function gameInstruction() {
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
     
+    playGameOverSound();
     
 
   }
