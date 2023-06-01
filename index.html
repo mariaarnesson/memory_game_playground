@@ -27,26 +27,13 @@
 
 <section class="score-panel">
     <div class="game-panel">
-      <span class="moves" style="color:beige;">0</span><p style="color:beige;">Move(s)</p>
-    </br>
-      <div class="timer" style="color: beige;"></div>
+      
+    </br></br></br>
+      <h2 class="timer" style="color: beige;"></h2>
+      <h2 style="color:beige;">Moves: </h2>
+      <h2 class="moves" style="color:beige;">0    </h2>
     </br>  
-      <div class="score-board">
-        
-        <span class="color-yellow" onclick="changeBackgroundYellow()">
-            <i class="fa-solid fa-droplet" style="color: #FFBA00;"></i>
-        </span>
-        <span class="color-blue" onclick="changeBackgroundBlue()">
-            <i class="fa-solid fa-droplet" style="color: rgb(125 180 222);"></i>
-        </span>
-        <span class="color-grey" onclick="changeBackgroundGrey()">
-            <i class="fa-solid fa-droplet" style="color: rgb(167 174 235);"></i>
-        </span>
-        <span class="color-white" onclick="changeBackgroundWhite()">
-            <i class="fa-solid fa-droplet" style="color: snow"></i> 
-        </span>
-        
-    </div>
+      
   </br>
       <!-- Instruction modal-->
       <button id="instructionButton">
@@ -134,6 +121,22 @@
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
     </div> 
+    <div class="score-board">
+        
+      <span class="color-yellow" onclick="changeBackgroundYellow()">
+          <i class="fa-solid fa-droplet" style="color: #FFBA00;"></i>
+      </span>
+      <span class="color-blue" onclick="changeBackgroundBlue()">
+          <i class="fa-solid fa-droplet" style="color: rgb(125 180 222);"></i>
+      </span>
+      <span class="color-grey" onclick="changeBackgroundGrey()">
+          <i class="fa-solid fa-droplet" style="color: rgb(167 174 235);"></i>
+      </span>
+      <span class="color-white" onclick="changeBackgroundWhite()">
+          <i class="fa-solid fa-droplet" style="color: snow"></i> 
+      </span>
+      
+  </div>
  
 <!-- Game Over Modal -->
     <div id="gameOverModal" class="gameover">
