@@ -52,17 +52,21 @@ const modal = document.getElementById('gameOverModal');
 
     resetBoard();
     playMatchSound();
+    displayStarIcon();
 
     if (document.querySelectorAll('.memory-card.flip').length === cards.length) {
       displayGameOverModal();
-      displayStarIcon();
+      
     }
   }
 
   function displayStarIcon() {
     const starIcon = document.getElementById('starIcon');
-    starIcon.innerHTML = '<i class="fas fa-star"></i>';
-    starIcon.style.display = 'block';
+    const star = document.createElement('i');
+    star.classList.add('fas', 'fa-star');
+  
+    starIcon.appendChild(star);
+    starIcon.style.display = 'block'; // Make the star icon visible
   }
 
   function unflipCards() {

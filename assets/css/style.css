@@ -110,7 +110,14 @@ button {
     cursor: pointer;
   }
 
+  #starIcon {
+    display: inline-block;
+  }
+
   #starIcon i {
     font-size: 24px; 
     color: gold;
-  }
+    display: inline-block; 
+    border: 1px solid black; 
+    padding: 5px; 
+    }
