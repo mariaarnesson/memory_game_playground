@@ -137,3 +137,9 @@ const modal = document.getElementById('gameOverModal');
     document.getElementById("totalTime").innerHTML = finalTime;
     gameOver();
   }
+
+  window.onclick = function(event) {
+    if (event.target.id == 'close') {
+        document.getElementById('gameOverModal').style.display = "none";
+    }
+};
