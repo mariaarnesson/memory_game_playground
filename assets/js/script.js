@@ -25,6 +25,11 @@ const modal = document.getElementById('gameOverModal');
     }
   }
 
+  function logIn() {
+    const username = document.getElementById("usernameInput").value;
+    resetBoard(username)
+  }
+
   function playMatchSound() {
     matchSound.currentTime = 0; // Reset the sound to the beginning
     matchSound.play();
@@ -55,7 +60,7 @@ const modal = document.getElementById('gameOverModal');
     checkForMatch();
   }
 
-  function checkForMatch() {
+  function checkForMatch(username) {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? disableCards() : unflipCards();
    
@@ -123,7 +128,7 @@ const modal = document.getElementById('gameOverModal');
 
 
 
-  function resetBoard() {
+  function resetBoard(username) {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
   }
@@ -144,12 +149,13 @@ const modal = document.getElementById('gameOverModal');
   cards.forEach(card => card.addEventListener('click', flipCard));
 
 
-  function displayGameOverModal() {
+  function displayGameOverModal(username) {
     modal.style.display = "block";
     finalTime = timer.innerHTML;
 
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
+    document.getElementById("username").innerHTML = 'Hi ${username} !'
     gameOver();
   }
 
