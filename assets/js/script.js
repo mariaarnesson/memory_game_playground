@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.memory-card');
 const counter = document.querySelector(".moves");
 const matchSound = document.getElementById("matchSound");
+const flipCardSound = document.getElementById("flipCardSound");
 const modal = document.getElementById('gameOverModal');
   let hasFlippedCard = false;
   let lockBoard = false;
@@ -15,10 +16,15 @@ const modal = document.getElementById('gameOverModal');
     matchSound.play();
   }
 
+  function playFlipCardSound() {
+    flipCardSound.currentTime = 0;
+    flipCardSound.play();
+  }
+
   function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
-
+    playFlipCardSound();
     this.classList.add('flip');
 
     if (!hasFlippedCard) {
@@ -30,6 +36,7 @@ const modal = document.getElementById('gameOverModal');
     secondCard = this;
     lockBoard = true;
 
+    
     checkForMatch();
   }
 
@@ -114,20 +121,8 @@ const modal = document.getElementById('gameOverModal');
   function displayGameOverModal() {
     modal.style.display = "block";
     finalTime = timer.innerHTML;
+
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
     gameOver();
   }
-
- // function gameOver(){
-   // if (flipCard.length == 12){
-  //    clearInterval(interval);
-  //    finalTime = timer.innerHTML;
-
-      // show congratulations modal
-  //    modal.classList.add("show");
-
-  //    document.getElementById("finalMove").innerHTML = moves;
-  //    document.getElementById("totalTime").innerHTML = finalTime;
- //   };
- // }
