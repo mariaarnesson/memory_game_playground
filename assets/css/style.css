@@ -17,8 +17,16 @@ h1 {
   color: tomato;
 }
 .score-panel {
-  left: 35%;
-  top: 6%;
+    height: 105px;
+    top: 3%;
+    left: 16%;
+    padding: 0em;
+    margin-left: 5em;
+    position: absolute;
+    width: 43em;
+    border-radius: 2em;
+    padding: 0em;
+    text-align: center;
 }
 .game-panel {
   font-size: 2em;
