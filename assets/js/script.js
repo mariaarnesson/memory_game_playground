@@ -10,18 +10,21 @@ const modal = document.getElementById('gameOverModal');
   let elapsedTime = 0;
   var second = 0, minute = 0; hour = 0;
   var timer = document.querySelector(".timer");
+  var memoryGame = document.querySelector('.memory-game');
   var interval;
 
   function startPage() {
     var home = document.getElementById("home");
-    var memoryGame = document.querySelector('.memory-game');
+    var endGameMessage = document.getElementById("endGameMessage");
 
     if (home.style.display === "none") {
         home.style.display = "flex";
         memoryGame.style.display = "none";
+        endGameMessage.style.display = "none";
     } else {
         home.style.display = "none";
         memoryGame.style.display = "flex";
+        endGameMessage.style.display = "none"
     
     }
   }
@@ -133,10 +136,17 @@ const modal = document.getElementById('gameOverModal');
   }
 
   function endGame() {
+
+    var endGameMessage = document.getElementById("endGameMessage");
+    finalTime = timer.innerHTML;
+
     clearInterval(interval);
-    modal.style.display = "none"; // Hide the game over modal
-    home.style.display = "flex";
-    document.getElementById("gameOverMessage").innerHTML = "You lost! The game is now over!";
+    endGameMessage.style.display = "flex";
+    memoryGame.style.display = "none";
+    
+    document.getElementById("finalMove").innerHTML = moves;
+    document.getElementById("totalTime").innerHTML = finalTime;
+    
     
 
   }
