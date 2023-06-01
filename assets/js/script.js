@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.memory-card');
 const counter = document.querySelector(".moves");
 const matchSound = document.getElementById("matchSound");
+const modal = document.getElementById('gameOverModal');
   let hasFlippedCard = false;
   let lockBoard = false;
   let firstCard, secondCard;
@@ -35,6 +36,7 @@ const matchSound = document.getElementById("matchSound");
   function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     isMatch ? disableCards() : unflipCards();
+   
   }
 
   function disableCards() {
@@ -110,9 +112,11 @@ const matchSound = document.getElementById("matchSound");
 
 
   function displayGameOverModal() {
+    modal.style.display = "block";
     finalTime = timer.innerHTML;
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
+    gameOver();
   }
 
  // function gameOver(){
