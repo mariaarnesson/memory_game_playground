@@ -97,6 +97,9 @@ button {
     flex-direction: column;
     background-color: #fff;
   }
+  #gameOverModal {
+    display: none;
+  }
   .close {
     align-self: flex-end;
     color: rgb(37, 40, 44);

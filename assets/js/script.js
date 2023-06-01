@@ -138,8 +138,8 @@ const modal = document.getElementById('gameOverModal');
     gameOver();
   }
 
-  window.onclick = function(event) {
-    if (event.target.id == 'close') {
-        document.getElementById('gameOverModal').style.display = "none";
+  window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('close')) {
+      document.getElementById('gameOverModal').style.display = "none";
     }
-};
+  });
