@@ -197,10 +197,7 @@ function gameInstruction() {
     
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
-    
-    playGameOverSound();
-    
-
+  
   }
 
   function resetBoard() {

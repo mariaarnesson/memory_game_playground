@@ -35,7 +35,7 @@ h1 {
 }
 #home {
   position: absolute;
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
