@@ -45,6 +45,7 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 
 
 ## Features Left to Implement
+- I would like that the user has access to difficulty levels.
 
 # Design
 
