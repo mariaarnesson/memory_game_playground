@@ -78,6 +78,6 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 ## Content:
 
- - [w3schools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval3) My codes were based on information from that site
+ - [w3schools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval3) My codes were based on information from that site.
 
 ## Media:
