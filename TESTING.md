@@ -30,3 +30,11 @@
     - The "Play again" button always shows up in the final message.
 
 ### Test Cases and Results
+
+1. Home Page:
+- After the page loads:
+    - An computer generated 2d photo is shown in the background. 
+    - The title of the game 'Memory game' is shown, the text is written in large font, in the color of tomates. 
+    - Below the user can see two buttons: "Play Game" and "Game Instructions".
+        - when the user selects: "game instruction", the modal opens, darkening the entire page, and a div opens in sight where the user can read the description of the instruction game.
+        - By selecting the "play Game" option, a new page is loaded where the user has the possibility to start the game.
