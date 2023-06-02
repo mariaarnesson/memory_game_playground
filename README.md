@@ -56,7 +56,7 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 # Testing
 
 Testing information can be found in separate [TESTING.md](TESTING.md) file.
-# Testing
+
 
 # Deployment:
 
@@ -69,6 +69,10 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 # Technologies Used
 ## Languages Used
+
+- [HTML](https://sv.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://sv.wikipedia.org/wiki/Javascript)
 
 # Credits
 
