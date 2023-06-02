@@ -23,6 +23,14 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 
 ## The Memory Game Logo:
 
+- When the user open the page the first thing the user can see is the Memory Games logo as well as options to start the game or read the game instructions:
+
+![logo](assets/images/game_logo.png)
+
+![instruction](assets/images/instruction.png)
+
+
+
 ## Features Left to Implement
 
 # Design
