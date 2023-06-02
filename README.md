@@ -29,6 +29,19 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 
 ![instruction](assets/images/instruction.png)
 
+- The Game Area:
+    - By pressing on "Play Game" the user will continue to the other side with the game area. 
+    - The Timer starts and moves are counted each time the user selects two cards.
+    - The user can choose any cards and match them together:
+
+ - This is what all pairs of cards look like:
+
+    - This is what the different background colors of the game look like:
+
+
+    - The final message looks like this:
+
+
 
 
 ## Features Left to Implement
