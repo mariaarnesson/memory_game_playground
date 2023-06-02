@@ -55,9 +55,17 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 
 # Testing
 
+Testing information can be found in separate [TESTING.md](TESTING.md) file.
 # Testing
 
 # Deployment:
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+    - In the GitHub repository, navigated to the Settings tab.
+    - From the tab in the left hand side sidebar, select Pages.
+    - Afrerword select main under branch. 
+    - Click the save button.
+    - The page had updated. 
 
 # Technologies Used
 ## Languages Used
