@@ -10,6 +10,17 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 ## User Experience 
 ### User stories:
 
+- The user should be able to read the instructions of the game by reading the instructions on the homepage.
+- The user should be able to see all 16 double-sided cards random selected.
+- The user should be able to change the background color.
+- The user should be able to see the tab by clicking on it to match it with another card.
+- The user should activate the timer by clicking on button: "Game Start".
+- The user should activate the move counting by pressing on the first two cards.
+- The user should be able to stop the game at any time during the game by pressing "Stop Game".
+- The user should receive a message when all cards have been matched and how many moves have been made at the end of the game.
+- The user should be able to play again after finishing the game by pressing: "Play Game"
+
+
 ## The Memory Game Logo:
 
 ## Features Left to Implement
