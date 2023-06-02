@@ -92,14 +92,18 @@ h1 {
 
 /* Modal Content */
 .instruction-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  padding: 1em;
+	background-image: url(https://img.freepik.com/free-vector/gradient-grainy-gradient-texture_79603-1642.jpg?w=1060&t=st=1685391406~exp=1685392006~hmac=263844d39b8c053cb85853a4605d4bfa0262fafd713964b3cd58092ace8ef29e);
+	background-repeat: no-repeat;
+	background-size: cover;
+  border-radius: 4em;
 }
-
-
+.content {
+  border: 6px grey solid;
+  background-color: blanchedalmond;
+  border-radius: 3em;
+  padding: 42px;
+}
 .memory-game {
   width: 572px;
   height: 428px;
@@ -147,20 +151,6 @@ h1 {
  
 }
 
-span {
-  display: inline-block;
-	padding: 15px 25px;
-	font-size: 24px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-	background-color: #e58ed2;
-	border: none;
-	border-radius: 15px;
-	box-shadow: 0 9px #999;
-}
 button {
 	display: inline-block;
 	padding: 15px 25px;
