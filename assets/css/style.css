@@ -17,6 +17,9 @@ h1 {
   color: tomato;
   text-align: center;
 }
+p {
+  font-family:cursive;
+}
 .score-panel {
   height: 105px;
   top: 3%;
@@ -97,6 +100,8 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: cover;
   border-radius: 4em;
+  width: 50%;
+  margin: auto;
 }
 .content {
   border: 6px grey solid;
