@@ -16,6 +16,7 @@ const modal = document.getElementById('gameOverModal');
   var instruction = document.getElementById("myInstruction");
   var btn = document.getElementById("instructionButton");
   var span = document.getElementsByClassName("close")[0];
+  var plyAgain = document.getElementById("playAgain");
 
   btn.onclick = function() {
     instruction.style.display = "block";
@@ -197,6 +198,9 @@ function gameInstruction() {
     
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
+
+    var plyAgain = document.getElementById("playAgain");
+    playAgain.style.display = "block";
   
   }
 
@@ -208,6 +212,7 @@ function gameInstruction() {
   function gameOver() {
     clearInterval(interval);
     displayGameOverModal();
+
 
   }
 
@@ -229,6 +234,37 @@ function gameInstruction() {
     document.getElementById("totalTime").innerHTML = finalTime;
 
     gameOver();
+
+    
+    
+  }
+
+  var plyAgain = document.getElementById("playAgain"); 
+  playAgain.addEventListener("click", gameAgain);
+
+  function gameAgain() {
+    resetBoard();
+    moves = 0;
+    elapsedTime = 0;
+    counter.innerHTML = moves;
+    timer.innerHTML = "0 mins 0 secs";
+    clearInterval(interval);
+
+    var modal = document.getElementById('gameOverModal');
+    modal.style.display = "none";
+
+    var playAgain = document.getElementById("playAgain");
+    playAgain.style.display = "none";
+
+    cards.forEach(card => card.addEventListener('click', flipCard));
+
+    cards.forEach(card => {
+      let randomPos = Math.floor(Math.random() * 12);
+      card.style.order = randomPos;
+    });
+
+    var memoryGame = document.querySelector('.memory-game');
+    memoryGame.style.display = "flex";
   }
 
   window.addEventListener('click', function(event) {

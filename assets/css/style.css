@@ -74,9 +74,13 @@ p {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-image: url('https://img.freepik.com/free-vector/yes-no-concept-illustration_114360-7564.jpg?w=826&t=st=1685626796~exp=1685627396~hmac=919168a9a87316c7b83f10e5c13eec9c43cd3cf3f400ad129db5704c274e0128');
+  background-image: url('https://img.freepik.com/free-vector/game-background_23-2148072744.jpg?w=826&t=st=1685697410~exp=1685698010~hmac=d4fbe717809353a38c8730d47bef5fa3d9abd2f4b01348121708913f3e9d7d19');
 
+}
+#playAgain {
+  display: none;
 }
 /* instructions */
 .instruction {

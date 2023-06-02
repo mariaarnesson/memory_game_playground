@@ -145,20 +145,25 @@
  
 <!-- Game Over Modal -->
     <div id="gameOverModal" class="gameover">
-      <div class="gameover-content">
+      <div class="introduction-content">
+        <div class="content">
         <span class="close">&times;</span>
         <h2>Game Over!</h2>
         <p>Congratulations! You completed the game.</p>
         <p>Moves: <span id="finalMove"></span></p>
         <p>Time: <span id="totalTime"></span></p>
+        <button id="playAgain">Play again</button>
+      </div>
       </div>
     </div>
 <!-- End Game-->
 <div id="endGameMessage">
-<h1> Time is up and you've lost. </h1> 
-<p>Moves: <span id="finalMove"></span></p>
-<p>Time: <span id="totalTime"></span></p>
-<button onclick="startPage()"> Play Again </button>
+  
+<h2> I'm sorry but you lost. But don't give up and try again! </h2>
+<p>You just did <span id="finalMove"></span> moves </p>
+  <p>in <span id="totalTime"></span></p>
+
+<button id="playAgain"> Play Again </button>
 
 </div>
     
