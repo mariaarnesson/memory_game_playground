@@ -33,10 +33,16 @@ Here is a very popular game called memory game. It's a fun game for both adults 
     - By pressing on "Play Game" the user will continue to the other side with the game area. 
     - The Timer starts and moves are counted each time the user selects two cards.
     - The user can choose any cards and match them together:
+ ![game_board](assets/images/game_board.png)   
 
  - This is what all pairs of cards look like:
 
     - This is what the different background colors of the game look like:
+        - ![yellow_background](assets/images/yellow_background.png)
+
+        - ![blue_background](assets/images/blue_background.png)
+
+        - ![grey_background](assets/images/grey_background.png)
 
 
     - The final message looks like this:
