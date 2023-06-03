@@ -108,10 +108,12 @@ p {
   margin: auto;
 }
 .content {
+  width: 50%;
   border: 6px grey solid;
   background-color: blanchedalmond;
   border-radius: 3em;
   padding: 42px;
+  margin: auto;
 }
 .memory-game {
   width: 572px;
