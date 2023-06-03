@@ -58,6 +58,24 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 # Design
 
 ## Wireframe:
+
+
+### Wireframe Deskopt:
+
+![wireframes_home](assets/images/wireframe_desktop_home.png)
+
+![wireframes_desktop](assets/images/wireframes_desktop.png)
+
+![wireframes_modal](assets/images/wireframes_modal.png)
+
+### Wireframe Ipad:
+
+![wireframes_ipad](assets/images/wireframes_ipad.png)
+
+### Wireframe Iphone:
+
+![wireframes_iphone](assets/images/wireframes_iphone.png)
+
 ## Colour Adobe
 The background of the game looks fairy-tale, encouraging the player to play, cheerful and transparent colors.
 
