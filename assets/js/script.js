@@ -4,6 +4,7 @@ const matchSound = document.getElementById("matchSound");
 const flipCardSound = document.getElementById("flipCardSound");
 const gameOverSound = document.getElementById("gemaOverSound");
 const modal = document.getElementById('gameOverModal');
+const span = document.getElementsByClassName('close')[0];
   let hasFlippedCard = false;
   let lockBoard = false;
   let firstCard, secondCard;
@@ -15,7 +16,6 @@ const modal = document.getElementById('gameOverModal');
   var interval;
   var instruction = document.getElementById("myInstruction");
   var btn = document.getElementById("instructionButton");
-  var span = document.getElementsByClassName("close")[0];
   var plyAgain = document.getElementById("playAgain");
 
   btn.onclick = function() {
@@ -181,28 +181,13 @@ function gameInstruction() {
         }
 
         if (elapsedTime >= 120) {
-          endGame();
+          gameOver();
         }
        
       },1000);
   }
 
-  function endGame() {
-
-    var endGameMessage = document.getElementById("endGameMessage");
-    finalTime = timer.innerHTML;
-
-    clearInterval(interval);
-    endGameMessage.style.display = "flex";
-    memoryGame.style.display = "none";
-    
-    document.getElementById("finalMove").innerHTML = moves;
-    document.getElementById("totalTime").innerHTML = finalTime;
-
-    var plyAgain = document.getElementById("playAgain");
-    playAgain.style.display = "block";
-  
-  }
+ 
 
   function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
@@ -239,36 +224,15 @@ function gameInstruction() {
     
   }
 
-  var plyAgain = document.getElementById("playAgain"); 
-  playAgain.addEventListener("click", gameAgain);
 
-  function gameAgain() {
-    resetBoard();
-    moves = 0;
-    elapsedTime = 0;
-    counter.innerHTML = moves;
-    timer.innerHTML = "0 mins 0 secs";
-    clearInterval(interval);
-
-    var modal = document.getElementById('gameOverModal');
-    modal.style.display = "none";
-
-    var playAgain = document.getElementById("playAgain");
-    playAgain.style.display = "none";
-
-    cards.forEach(card => card.addEventListener('click', flipCard));
-
-    cards.forEach(card => {
-      let randomPos = Math.floor(Math.random() * 12);
-      card.style.order = randomPos;
-    });
-
-    var memoryGame = document.querySelector('.memory-game');
-    memoryGame.style.display = "flex";
+  span.onclick = function() {
+    gameOverModal.style.display = "none";
   }
-
-  window.addEventListener('click', function(event) {
-    if (event.target.classList.contains('close')) {
-      document.getElementById('gameOverModal').style.display = "none";
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      gameOverModal.style.display = 'none';
     }
-  });
+  }
+  
+
+ 

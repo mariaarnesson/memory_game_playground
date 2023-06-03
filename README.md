@@ -57,6 +57,13 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 
 ## Wireframe:
 ## Colour Adobe
+The background of the game looks fairy-tale, encouraging the player to play, cheerful and transparent colors.
+
+- ![color_home](assets/images/color_adobe_home.png)
+- ![color_white](assets/images/color_adobe_white.png)
+- ![color_yellow](assets/images/color_adobe_yellow.png)
+- ![color_blue](assets/images/color_adobe_blue.png)
+- ![color_purple](assets/images/color_adobe_purple.png)
 
 
 # Testing
