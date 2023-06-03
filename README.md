@@ -36,6 +36,7 @@ Here is a very popular game called memory game. It's a fun game for both adults 
  ![game_board](assets/images/game_board.png)   
 
  - This is what all pairs of cards look like:
+ ![cards](assets/images/all_cards.png)
 
     - This is what the different background colors of the game look like:
         - ![yellow_background](assets/images/yellow_background.png)
