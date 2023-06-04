@@ -247,6 +247,16 @@ const span = document.getElementsByClassName('close')[0];
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
 
+    let feedbackText = "";
+    if (elapsedTime < 60) {
+      feedbackText = "Very well!";
+    } else if (elapsedTime < 120) {
+      feedbackText = "You did very well, but you could do better!";
+    } else {
+      feedbackText = "I'm sorry but you lost";
+    }
+    document.getElementById("feedback").innerHTML = feedbackText;
+
     gameOver(); 
   }
 
