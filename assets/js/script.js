@@ -259,5 +259,22 @@ const span = document.getElementsByClassName('close')[0];
     }
   }
   
+  function restartGame() {
+    moves = 0;
+    elapsedTime = 0;
+    counter.innerHTML = moves;
+
+    const starIcon = document.getElementById('starIcon');
+    starIcon.innerHTML = '';
+    starIcon.style.display = 'none';
+
+    cards.forEach(card => card.classList.remove('flip'));
+    cards.forEach(card => card.addEventListener('click', flipCard));
+
+    clearInterval(interval);
+    timer.innerHTML = '0mins 0secs';
+
+    modal.style.display = 'none';
+  }
 
  
