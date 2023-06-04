@@ -251,11 +251,11 @@ const span = document.getElementsByClassName('close')[0];
   }
 
   span.onclick = function() {
-    gameOverModal.style.display = "none";
+    modal.style.display = "none";
   }
   window.onclick = function(event) {
     if (event.target === modal) {
-      gameOverModal.style.display = 'none';
+      modal.style.display = 'none';
     }
   }
   
