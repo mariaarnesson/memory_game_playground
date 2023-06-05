@@ -11,6 +11,18 @@
         - [result_part2](test/test_validator/test_result_validatorhtml_part2.png)
         - [result_part3](test/test_validator/test_result_validatorhtml_part3.png)
 
+- [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    - ![CSS Validator - result](assets/images/validator_css.png)
+    - [result_css_part1](test/test_validator/validator_css_part1.png)
+    - [result_css_part2](test/test_validator/test_result_validatorcss_part2.png)
+    - [result_css_part3](test/test_validator/test_result_validator_css_part3.png)
+    - [result_css_part4](test/test_validator/test_result_validator_css_part4.png)
+    - [result_css_part5](test/test_validator/test_result_validator_css_part5.png)
+    - [result_css_part6](test/test_validator/test_result_validator_css_part6.png)
+
+    
+
+
 # Manual Testing
 
 ### Testing User Experience (UX) stories:
