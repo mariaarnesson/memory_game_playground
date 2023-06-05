@@ -256,7 +256,7 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
     } else if (elapsedTime < 90) {
       feedbackText = "You did very well, but you could do better!";
     } else {
-      feedbackText = "I'm sorry but you lost";
+      feedbackText = "I'm sorry but you lost. Let's try again!";
     }
     document.getElementById("feedback").innerHTML = feedbackText;
 
@@ -290,10 +290,17 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
     cards.forEach(card => card.classList.remove('flip'));
     cards.forEach(card => card.addEventListener('click', flipCard));
 
+    cards.forEach(card => {
+      let ramdomPos = Math.floor(Math.random() * 12);
+      card.style.order = ramdomPos;
+    });
+
+    
     clearInterval(interval);
     timer.innerHTML = '0mins 0secs';
 
-    modal.style.display = 'none';
+    gameover.style.display = 'none';
+    
   }
 
  
