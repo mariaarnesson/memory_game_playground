@@ -23,7 +23,7 @@ p {
 .score-panel {
   height: 105px;
   top: 3%;
-  left: 4%;
+  left: -5%;
   padding: 0em;
   margin-left: 5em;
   position: absolute;
@@ -151,25 +151,25 @@ p {
 }
 
 button {
-	display: inline-block;
-	padding: 15px 25px;
-	font-size: 24px;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-	background-color: #E5958E;
-	border: none;
-	border-radius: 15px;
-	box-shadow: 0 9px #999;
+	  display: inline-block;
+    padding: 3px 18px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #E5958E;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
   }
   
   button:hover {background-color: #FDB095}
   
   button:active {
 	background-color: #FDB095;
-	box-shadow: 0 5px #666;
+	box-shadow: 0 2px #666;
 	transform: translateY(4px);
   }
   .gameover {
