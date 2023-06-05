@@ -4,7 +4,8 @@ const matchSound = document.getElementById("matchSound");
 const flipCardSound = document.getElementById("flipCardSound");
 const gameOverSound = document.getElementById("gemaOverSound");
 const gameover = document.getElementById('gameOverModal');
-const span = document.getElementsByClassName('close')[0];
+const instructionCloseBtn = document.getElementsByClassName('closeInstruction')[0];
+const gameoverCloseBtn = document.getElementsByClassName('close')[0];
   let hasFlippedCard = false;
   let lockBoard = false;
   let firstCard, secondCard;
@@ -37,15 +38,14 @@ const span = document.getElementsByClassName('close')[0];
   }
   
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+  instructionCloseBtn.onclick = function() {
 
-    var span = document.getElementsByClassName("close1")[0];
-    instruction.style.display = "none";
+  instruction.style.display = "none";
   }
   
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == instruction) {
       instruction.style.display = "none";
     }
   }
@@ -196,7 +196,7 @@ const span = document.getElementsByClassName('close')[0];
   // when moves start to be counted, there is also a timer that starts counting playing time.
   function startTimer(){
     interval = setInterval(function() {
-        timer.innerHTML = minute+"mins "+second+"secs";
+        timer.innerHTML = minute+"min "+second+"sec";
         second++;
         elapsedTime++;
         if(second == 60){
@@ -208,7 +208,7 @@ const span = document.getElementsByClassName('close')[0];
             minute = 0;
         }
 
-        if (elapsedTime >= 120) {
+        if (elapsedTime >= 90) {
           gameOver();
         }
        
@@ -251,9 +251,9 @@ const span = document.getElementsByClassName('close')[0];
     document.getElementById("totalTime").innerHTML = finalTime;
 
     let feedbackText = "";
-    if (elapsedTime < 60) {
+    if (elapsedTime < 30) {
       feedbackText = "Very well! You finished the game very quickly.";
-    } else if (elapsedTime < 120) {
+    } else if (elapsedTime < 90) {
       feedbackText = "You did very well, but you could do better!";
     } else {
       feedbackText = "I'm sorry but you lost";
@@ -263,11 +263,11 @@ const span = document.getElementsByClassName('close')[0];
     gameOver(); 
   }
 
-  span.onclick = function() {
+  gameoverCloseBtn.onclick = function() {
     gameover.style.display = "none";
   }
   window.onclick = function(event) {
-    if (event.target === modal) {
+    if (event.target === gameover) {
       gameover.style.display = 'none';
     }
   }
