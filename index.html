@@ -32,15 +32,15 @@
   <div id="myInstruction" class="instruction">
   
     <!-- Modal content -->
-    <div class="instruction-content">
+    <div class="content">
       <span class="close">&times;</span>
-      <div class="content">
+      
                   <p>Test your memory with this memory game! You start 
                   the game by choosing a card and finding another identical one. 
                   You need to find all pairs. When you find all pairs, you have 
                   completed this game.
               </p>
-      </div>
+      
     </div>
       </div>
   </div>
@@ -146,27 +146,18 @@
     
  
 <!-- Game Over Modal -->
-    <div id="gameOverModal" class="modal">
+    <div id="gameOverModal" class="gameover">
       <div class="content">
-        <span class="close">&times;</span>
+        <span aria-hidden="true" class="close">&times;</span>
         <h2>Game Over!</h2>
-        <p>Congratulations! You completed the game.</p>
+        <hr>
+        <h3 id="feedback"></h3>
         <p>Moves: <span id="finalMove"></span></p>
         <p>Time: <span id="totalTime"></span></p>
-        <p id="feedback"></p>
+        
         
       </div>
     </div>
-<!-- End Game-->
-<div id="endGameMessage">
-  
-<h2> I'm sorry but you lost. But don't give up and try again! </h2>
-<p>You just did <span id="finalMove"></span> moves </p>
-  <p>in <span id="totalTime"></span></p>
-
-
-
-</div>
     
 
     <script src="assets/js/script.js"></script>

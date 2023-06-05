@@ -66,19 +66,7 @@ p {
   background-size: cover;
   background-image: url('https://img.freepik.com/free-vector/cartoon-forest-background-nature-landscape-with-deciduous-trees-moss-rocks-grass-bushes-sunlight-spots-ground-scenery-summer-spring-wood-parallax-natural-scene-vector-illustration_107791-9113.jpg?w=1380&t=st=1684933332~exp=1684933932~hmac=0cf5b242f3a328f6e9f1e07cd12e24f839ee23a8a9017e47293652a987fe9809');
 }
-#endGameMessage {
-  position: absolute;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-image: url('https://img.freepik.com/free-vector/game-background_23-2148072744.jpg?w=826&t=st=1685697410~exp=1685698010~hmac=d4fbe717809353a38c8730d47bef5fa3d9abd2f4b01348121708913f3e9d7d19');
 
-}
 #playAgain {
   display: none;
 }
@@ -184,7 +172,7 @@ button {
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
   }
-  .modal {
+  .gameover {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */

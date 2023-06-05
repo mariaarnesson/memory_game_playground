@@ -3,7 +3,7 @@ const counter = document.querySelector(".moves");
 const matchSound = document.getElementById("matchSound");
 const flipCardSound = document.getElementById("flipCardSound");
 const gameOverSound = document.getElementById("gemaOverSound");
-const modal = document.getElementById('gameOverModal');
+const gameover = document.getElementById('gameOverModal');
 const span = document.getElementsByClassName('close')[0];
   let hasFlippedCard = false;
   let lockBoard = false;
@@ -16,6 +16,7 @@ const span = document.getElementsByClassName('close')[0];
   var interval;
   var instruction = document.getElementById("myInstruction");
   var btn = document.getElementById("instructionButton");
+  
   var plyAgain = document.getElementById("playAgain");
 
 
@@ -37,6 +38,8 @@ const span = document.getElementsByClassName('close')[0];
   
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
+
+    var span = document.getElementsByClassName("close1")[0];
     instruction.style.display = "none";
   }
   
@@ -241,7 +244,7 @@ const span = document.getElementsByClassName('close')[0];
  // with the content where it is written how many moves the user made 
  // and also how long it took the user to playing the game. 
   function displayGameOverModal() {
-    modal.style.display = "block";
+    gameover.style.display = "block";
     finalTime = timer.innerHTML;
 
     document.getElementById("finalMove").innerHTML = moves;
@@ -249,7 +252,7 @@ const span = document.getElementsByClassName('close')[0];
 
     let feedbackText = "";
     if (elapsedTime < 60) {
-      feedbackText = "Very well!";
+      feedbackText = "Very well! You finished the game very quickly.";
     } else if (elapsedTime < 120) {
       feedbackText = "You did very well, but you could do better!";
     } else {
@@ -261,11 +264,11 @@ const span = document.getElementsByClassName('close')[0];
   }
 
   span.onclick = function() {
-    modal.style.display = "none";
+    gameover.style.display = "none";
   }
   window.onclick = function(event) {
     if (event.target === modal) {
-      modal.style.display = 'none';
+      gameover.style.display = 'none';
     }
   }
   
