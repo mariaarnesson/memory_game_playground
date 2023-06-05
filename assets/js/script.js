@@ -148,6 +148,7 @@ var btn = document.getElementById("instructionButton");
     resetBoard();
     playMatchSound();
     displayStarIcon();
+    moveCounter();
 
     if (document.querySelectorAll('.memory-card.flip').length === cards.length) {
       displayGameOverModal();
@@ -183,7 +184,7 @@ var btn = document.getElementById("instructionButton");
   function moveCounter() {
       moves++;
       counter.innerHTML = moves;
-      if(moves == 1){
+      if(moves === 1){
         second = 0;
         minute = 0;
         hour = 0;
