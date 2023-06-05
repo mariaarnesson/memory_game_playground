@@ -6,20 +6,20 @@ const gameOverSound = document.getElementById("gemaOverSound");
 const gameover = document.getElementById('gameOverModal');
 const instructionCloseBtn = document.getElementsByClassName('closeInstruction')[0];
 const gameoverCloseBtn = document.getElementsByClassName('close')[0];
-  let hasFlippedCard = false;
-  let lockBoard = false;
-  let firstCard, secondCard;
-  let moves = 0;
-  let elapsedTime = 0;
-  var second = 0, minute = 0; hour = 0;
-  var timer = document.querySelector(".timer");
-  var memoryGame = document.querySelector('.memory-game');
-  var scorePanel = document.querySelector('.score-panel');
-  var interval;
-  var instruction = document.getElementById("myInstruction");
-  var btn = document.getElementById("instructionButton");
-  
-  var plyAgain = document.getElementById("playAgain");
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+let moves = 0;
+let hour = 0;
+let finalTime = '';
+let elapsedTime = 0;
+var second = 0, minute = 0; hour = 0;
+var timer = document.querySelector(".timer");
+var memoryGame = document.querySelector('.memory-game');
+var scorePanel = document.querySelector('.score-panel');
+var interval;
+var instruction = document.getElementById("myInstruction");
+var btn = document.getElementById("instructionButton");
 
 
   // This is a function with which the user pressing the button
@@ -36,20 +36,13 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
 
   btn.onclick = function() {
     instruction.style.display = "block";
-  }
+  };
   
   // When the user clicks on <span> (x), close the modal
   instructionCloseBtn.onclick = function() {
 
   instruction.style.display = "none";
-  }
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == instruction) {
-      instruction.style.display = "none";
-    }
-  }
+  };
 
   // Thanks to this function, the user has the ability to change
   // the background to yellow color and photos in yellow tones.
@@ -139,10 +132,12 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
   // This function was borrowed from this site:
   // https://marina-ferreira.github.io/tutorials/js/memory-game/
   function checkForMatch() {
-    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-    isMatch ? disableCards() : unflipCards();
-   
+  if (firstCard.dataset.framework === secondCard.dataset.framework) {
+    disableCards();
+  } else {
+    unflipCards();
   }
+}
 
   // This function was borrowed from this site:
   // https://marina-ferreira.github.io/tutorials/js/memory-game/
@@ -269,14 +264,14 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
   //With this function, the user can close the modal by pressing "x".
   gameoverCloseBtn.onclick = function() {
     gameover.style.display = "none";
-  }
+  };
 
   // Thanks to this function, the user can close the modal by pressing anywhere outside the modal.
   window.onclick = function(event) {
     if (event.target === gameover) {
       gameover.style.display = 'none';
     }
-  }
+  };
   
   // Thanks to this function, the user can reset the game, and then the player's 
   //move counter is reset to zero, the time is reset to zero, 
