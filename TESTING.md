@@ -88,8 +88,22 @@ All steps are performed in browsers:
  - Microsoft Edge - Version 111.0.1661.44 (Officiell version) (64 bitar)
  - Firefox - 111.0 (64-bitars)
 
- ### This has been verified on every page:
-- Hover over each image has been made. The effect has been confirmed to be correct.
+ All steps have been entered and checked both in the Firefox browser on the tablet and in the iPhone browser.
+
+ #### Home Page:
+
 - The Play Game button has been pressed and confirmed to take the user to the page with game board.
+- The Instructions Game button has been pressed and confirmed to take the user to the Game Instructions Modal. 
+- The close span was pressed to check if the modal disappears when pressed on it. The effect has been confirmed to be correct.
+
+#### Game Board Page:
 - The Back button has been pressed and confirmed to take the user back to Home page.
-- The Instructions Game button has been pressed and confirmed to take the user to the Game Instructions Modal.                
+- All droplet icons has been pressed and confirmed that the background image changes.
+- Memory cards has been pressed. The effect has been confirmed to be correct.
+- It has been confirmed that the move counter is correct and the number of steps appears every time a pair of cards has have been flipped.
+- It has been confirmed that the timer is correct and is on after the move conuter is on. 
+- The Restart button has been pressed and confirmed that the game has been reset so that the player can start the game from the beginning.
+- It has been confirmed that game over modal starts right after the game ends and the content text is correct.
+- The close span was pressed to check if the modal disappears when pressed on it. The effect has been confirmed to be correct.
+- It has been confirmed that after pressing the play button again, the user is able to start a new game.
+              
