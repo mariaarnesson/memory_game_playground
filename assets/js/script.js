@@ -263,15 +263,21 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
     gameOver(); 
   }
 
+  //With this function, the user can close the modal by pressing "x".
   gameoverCloseBtn.onclick = function() {
     gameover.style.display = "none";
   }
+
+  // Thanks to this function, the user can close the modal by pressing anywhere outside the modal.
   window.onclick = function(event) {
     if (event.target === gameover) {
       gameover.style.display = 'none';
     }
   }
   
+  // Thanks to this function, the user can reset the game, and then the player's 
+  //move counter is reset to zero, the time is reset to zero, 
+  //and the revealed cards are covered up in order to start the game from the beginning.
   function restartGame() {
     moves = 0;
     elapsedTime = 0;
