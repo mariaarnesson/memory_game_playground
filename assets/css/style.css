@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Kalam&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -17,10 +17,19 @@ h1 {
   color: tomato;
   text-align: center;
 }
+h2 {
+  color: rgb(121, 101, 77);
+  font-family: Caveat, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+}
 p {
-  font-family:cursive;
+  font-family: Kalam, sans-serif;
+
 }
 .score-panel {
+  display: none;
   height: 105px;
   top: 3%;
   left: -5%;

@@ -14,6 +14,7 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
   var second = 0, minute = 0; hour = 0;
   var timer = document.querySelector(".timer");
   var memoryGame = document.querySelector('.memory-game');
+  var scorePanel = document.querySelector('.score-panel');
   var interval;
   var instruction = document.getElementById("myInstruction");
   var btn = document.getElementById("instructionButton");
@@ -85,9 +86,11 @@ const gameoverCloseBtn = document.getElementsByClassName('close')[0];
     if (home.style.display === "none") {
         home.style.display = "flex";
         memoryGame.style.display = "none";
+        scorePanel.style.display = "none";
     } else {
         home.style.display = "none";
         memoryGame.style.display = "flex";
+        scorePanel.style.display = "block";
     }
   }
 
