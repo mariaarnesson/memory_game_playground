@@ -1,169 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- font awesome and google fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    
-    <title>Memory Game</title>
-<body>
-
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <title>Memory Game</title>
+  </head>
+  
+  <body>
   <div id="home">
     <h1> Memory Game! </h1>
-    <div>
-    <button onclick="startPage()"> Play Game </button>
-     <!-- Instruction modal-->
-     <button id="instructionButton">
-      <i class="fa-solid fa-sheet-plastic"></i>
-    </button>
-  </div>
-  
-   <!--The Modal--> 
-  <div id="myInstruction" class="instruction">
-  
-    <!--Modal content --> 
-    <div class="content">
-      <span class="closeInstruction">&times;</span>
-      <h2>Game Instruction</h2>
-      <hr>
-        <p>Test your memory with this memory game! You start 
-        the game by choosing a card and finding another identical one. 
-        You need to find all pairs. When you find all pairs, you have 
-        completed this game.
-        </p>
-    </div>
+      <div>
+        <button onclick="startPage()"> Play Game </button>
+        <!-- Instruction modal-->
+        <button id="instructionButton">
+          <i class="fa-solid fa-sheet-plastic"></i>
+        </button>
       </div>
-  </div>
-    <audio id="flipCardSound" src="assets/audio/mixkit-game-ball-tap-2073.wav"></audio>
-    <audio id="matchSound" src="assets/audio/success-1-6297.mp3"></audio>
-    <audio id="gameOverSound" src="assets/audio/mixkit-retro-arcade-lose-2027.wav"></audio>
-
-<section class="score-panel">
-    <div class="game-panel">
-      <button onclick="startPage()">
-        <i class="fa-solid fa-backward" style="color: beige;"></i>
-      </button>
-      <button onclick="restartGame()">
-        <i class="fa-solid fa-arrow-rotate-left"></i>
-      </button>
-      <p class="timer" style="color: beige;"></p>
-      <p style="color:beige;">Moves: </p>
-      <p class="moves" style="color:beige;">0</p>
-  </div>
-  <div id="starIcon"></div>
   
-  <div class="score-board">
+      <!--The Modal--> 
+      <div id="myInstruction" class="instruction">
+        <!--Modal content --> 
+        <div class="content">
+          <span class="closeInstruction">&times;</span>
+          <h2>Game Instruction</h2>
+          <hr>
+          <p>Test your memory with this memory game! You start 
+          the game by choosing a card and finding another identical one. 
+          You need to find all pairs. When you find all pairs, you have 
+          completed this game.
+          </p>
+        </div>
+      </div>
+      </div>
 
-        
-    <div class="color-yellow" onclick="changeBackgroundYellow()">
-        <i class="fa-solid fa-droplet" style="color: #FFBA00;"></i>
-    </div>
-    <div class="color-blue" onclick="changeBackgroundBlue()">
-        <i class="fa-solid fa-droplet" style="color: rgb(125 180 222);"></i>
-    </div>
-    <div class="color-grey" onclick="changeBackgroundGrey()">
-        <i class="fa-solid fa-droplet" style="color: rgb(167 174 235);"></i>
-    </div>
-    <div class="color-white" onclick="changeBackgroundWhite()">
-        <i class="fa-solid fa-droplet" style="color: snow"></i> 
-    </div>
-    
-</div>
-  
-  
-</section>
+      <audio id="flipCardSound" src="assets/audio/mixkit-game-ball-tap-2073.wav"></audio>
+      <audio id="matchSound" src="assets/audio/success-1-6297.mp3"></audio>
 
-    <div class="memory-game">
-      
+      <div class="score-panel">
+        <div class="game-panel">
+          <button onclick="startPage()">
+            <i class="fa-solid fa-backward" style="color: beige;"></i>
+          </button>
+          <button onclick="restartGame()">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+          </button>
+          <p class="timer" style="color: beige;"></p>
+          <p style="color:beige;">Moves: </p>
+          <p class="moves" style="color:beige;">0</p>
+        </div>
+        <div id="starIcon"></div>
+  
+        <div class="score-board">
+          <div class="color-yellow" onclick="changeBackgroundYellow()">
+              <i class="fa-solid fa-droplet" style="color: #FFBA00;"></i>
+          </div>
+          <div class="color-blue" onclick="changeBackgroundBlue()">
+              <i class="fa-solid fa-droplet" style="color: rgb(125 180 222);"></i>
+          </div>
+          <div class="color-grey" onclick="changeBackgroundGrey()">
+              <i class="fa-solid fa-droplet" style="color: rgb(167 174 235);"></i>
+          </div>
+          <div class="color-white" onclick="changeBackgroundWhite()">
+              <i class="fa-solid fa-droplet" style="color: snow"></i> 
+          </div>
+        </div>
+      </div>
+      <div class="memory-game">
         <div class="memory-card" data-framework="zebra">
           <img class="front-face" src="assets/images/img-1.png" alt="Zebra">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="zebra">
           <img class="front-face" src="assets/images/img-1.png" alt="Zebra">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="elephant">
           <img class="front-face" src="assets/images/img-2.png" alt="Elephant">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="elephant">
           <img class="front-face" src="assets/images/img-2.png" alt="Elephant">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="giraffe">
           <img class="front-face" src="assets/images/img-3.png" alt="Giraffe">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="giraffe">
           <img class="front-face" src="assets/images/img-3.png" alt="Giraffe">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="roe">
           <img class="front-face" src="assets/images/img-4.png" alt="Roe">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="roe">
           <img class="front-face" src="assets/images/img-4.png" alt="Roe">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="cow">
           <img class="front-face" src="assets/images/img-5.png" alt="Cow">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="cow">
           <img class="front-face" src="assets/images/img-5.png" alt="Cow">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="dragon">
           <img class="front-face" src="assets/images/img-6.png" alt="Dragon">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-      
         <div class="memory-card" data-framework="dragon">
           <img class="front-face" src="assets/images/img-6.png" alt="Dragon">
           <img class="back-face" src="assets/images/img-front.png" alt="Memory Card">
         </div>
-    </div> 
-    
- 
-<!-- Game Over Modal -->
-    <div id="gameOverModal" class="gameover">
-      <div class="content">
-        <span aria-hidden="true" class="close">&times;</span>
-        <h3>Game Over!</h3>
-        <hr>
-        <h3 id="feedback"></h3>
-        <p>Moves: <span id="finalMove"></span></p>
-        <p>Time: <span id="totalTime"></span></p>
-        <button onclick="restartGame()">Play again</button>
-        
-        
+      </div> 
+      <!-- Game Over Modal -->
+      <div id="gameOverModal" class="gameover">
+        <div class="content">
+          <span aria-hidden="true" class="close">&times;</span>
+          <h3>Game Over!</h3>
+          <hr>
+          <p id="feedback"> </p>
+          <p>Moves: <span id="finalMove"></span></p>
+          <p>Time: <span id="totalTime"></span></p>
+          <button onclick="restartGame()">Play again</button>
+        </div>
       </div>
-    </div>
-    
-
-    <script src="assets/js/script.js"></script>
-    
-    <script src="https://kit.fontawesome.com/142db3e41a.js" crossorigin="anonymous"></script>
-</body>
-
+      <script src="assets/js/script.js"></script>  
+      <script src="https://kit.fontawesome.com/142db3e41a.js" crossorigin="anonymous"></script>
+  </body>
 </html>
