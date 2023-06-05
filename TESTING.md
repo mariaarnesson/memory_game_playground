@@ -82,7 +82,7 @@
                 - Below is the "Play Again" button. After clicking on it, the user has the option to start the whole game over again.
                 - On the upper right site is: "x" . By clicking on it, the user can easily close the modal.       
 
-## Testing on desktop
+## Testing on desktop and tablet and phone devices
 All steps are performed in browsers:
  - Chrome - Version 111.0.5563.65 (Officiell version) (64 bitar)
  - Microsoft Edge - Version 111.0.1661.44 (Officiell version) (64 bitar)
