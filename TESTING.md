@@ -2,9 +2,14 @@
 
 # Automated Testing
 
-## Testing Lighthouse 
-
 ## Testing Validator
+
+- [HTML Validator](https://validator.w3.org/#validate_by_input)
+    - result for index.html
+        - ![validator_html](assets/images/validator_html.png)
+        - [result_part1](test/test_validator/test_result_validatorhtml_part1.png)
+        - [result_part2](test/test_validator/test_result_validatorhtml_part2.png)
+        - [result_part3](test/test_validator/test_result_validatorhtml_part3.png)
 
 # Manual Testing
 
