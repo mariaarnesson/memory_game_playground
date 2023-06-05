@@ -111,6 +111,11 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 
 ## Content:
 
- - [w3schools](https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval3) My codes were based on information from that site.
+ - Code about how to hide a div element by pressing a button. [Display Property](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_display_toggle)
+ - Code about how to display a modal.[Modal](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal)
+ - Code about how to display moves counter and timer. [Moves counter & Timer](https://medium.com/@funkiefabulous003how-to-build-a-memory-matching-game-in-javascript-fbe0bf9884a2)
+ - Code about elapsed time. [Elapsed Time](https://ralzohairi.medium.com/displaying-dynamic-elapsed-time-in-javascript-260fa0e95049)
 
 ## Media:
+
+- [Flip card and match sounds](https://mixkit.co/free-sound-effects/game/)
