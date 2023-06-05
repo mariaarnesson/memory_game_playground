@@ -20,7 +20,12 @@
     - [result_css_part5](test/test_validator/test_result_validator_css_part5.png)
     - [result_css_part6](test/test_validator/test_result_validator_css_part6.png)
 
-    
+- [Javascript Validator](https://jshint.com/)
+    - ![JS Validator](assets/images/validator_jshint.png)
+
+
+
+
 
 
 # Manual Testing
@@ -76,3 +81,15 @@
                 Below is an icon with an hourglass, the text: "Your Time:", and a button with the time in which the user made the entire game.
                 - Below is the "Play Again" button. After clicking on it, the user has the option to start the whole game over again.
                 - On the upper right site is: "x" . By clicking on it, the user can easily close the modal.       
+
+## Testing on desktop
+All steps are performed in browsers:
+ - Chrome - Version 111.0.5563.65 (Officiell version) (64 bitar)
+ - Microsoft Edge - Version 111.0.1661.44 (Officiell version) (64 bitar)
+ - Firefox - 111.0 (64-bitars)
+
+ ### This has been verified on every page:
+- Hover over each image has been made. The effect has been confirmed to be correct.
+- The Play Game button has been pressed and confirmed to take the user to the page with game board.
+- The Back button has been pressed and confirmed to take the user back to Home page.
+- The Instructions Game button has been pressed and confirmed to take the user to the Game Instructions Modal.                
