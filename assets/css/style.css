@@ -61,7 +61,7 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 120%;
+  width: 100%;
   height: 100%;
   background-size: cover;
   background-image: url('https://img.freepik.com/free-vector/cartoon-forest-background-nature-landscape-with-deciduous-trees-moss-rocks-grass-bushes-sunlight-spots-ground-scenery-summer-spring-wood-parallax-natural-scene-vector-illustration_107791-9113.jpg?w=1380&t=st=1684933332~exp=1684933932~hmac=0cf5b242f3a328f6e9f1e07cd12e24f839ee23a8a9017e47293652a987fe9809');
@@ -184,20 +184,18 @@ button {
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
   }
-  .gameover {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    z-index: 99;
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .gameover-content {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   #gameOverModal {
     display: none;
