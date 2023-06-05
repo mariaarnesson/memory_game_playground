@@ -95,15 +95,6 @@ p {
 }
 
 /* Modal Content */
-.instruction-content {
-  padding: 1em;
-	background-image: url(https://img.freepik.com/free-vector/gradient-grainy-gradient-texture_79603-1642.jpg?w=1060&t=st=1685391406~exp=1685392006~hmac=263844d39b8c053cb85853a4605d4bfa0262fafd713964b3cd58092ace8ef29e);
-	background-repeat: no-repeat;
-	background-size: cover;
-  border-radius: 4em;
-  width: 50%;
-  margin: auto;
-}
 .content {
   width: 50%;
   border: 6px grey solid;
