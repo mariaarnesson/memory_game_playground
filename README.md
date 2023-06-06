@@ -47,7 +47,9 @@ Here is a very popular game called memory game. It's a fun game for both adults 
 
 
     - The final message looks like this:
-    ![gameover](assets/images/gameover.png)
+![gameover](assets/images/gameover.png)
+![gameover1](assets/images/gameover1.png)
+![gameover2](assets/images/gameover2.png)
 
 
 
@@ -99,6 +101,7 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
     - Afrerword select main under branch. 
     - Click the save button.
     - The page had updated. 
+    - The live link can be found here: [Memory Game]( https://mariaarnesson.github.io/memory_game_playground/)
 
 # Technologies Used
 ## Languages Used
@@ -106,6 +109,15 @@ Testing information can be found in separate [TESTING.md](TESTING.md) file.
 - [HTML](https://sv.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [Javascript](https://sv.wikipedia.org/wiki/Javascript)
+
+
+## Frameworks, Libraries and Programs Used:
+
+- [Balsamiq](https://balsamiq.com/) was used to create wireframes.
+- [Font Awesome](https://fontawesome.com/) was used to create icons to footer.
+- [Google Fonts](https://fonts.google.com/?preview.text=Love%20Running&preview.text_type=custom) was used to import 'Caveat', 'Courier New' och 'Sans' that have been used for each page.
+- [Git](https://git-scm.com/) was used  by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub](https://github.com/) was used as a repository for code of the project. 
 
 # Credits
 
