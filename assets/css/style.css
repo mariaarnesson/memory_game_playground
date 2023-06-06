@@ -42,8 +42,9 @@ p {
   text-align: center;
 }
 .game-panel {
-  column-gap: 15px;
+  column-gap: 7px;
   display: inline-flex;
+  margin-left: 15em;
   
 }
 .score-board {
@@ -242,11 +243,4 @@ button {
   }
 
  
-  }
-
-  @media screen and (min-width: 540px) {
-    .score-panel {
-      left: 20%;
-    }
-
   }
