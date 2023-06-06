@@ -42,7 +42,7 @@ p {
   text-align: center;
 }
 .game-panel {
-  column-gap: 1em;
+  column-gap: 7px;
   display: inline-flex;
   margin-left: 15em;
   
