@@ -42,9 +42,8 @@ p {
   text-align: center;
 }
 .game-panel {
-  column-gap: 7px;
+  column-gap: 15px;
   display: inline-flex;
-  margin-left: 15em;
   
 }
 .score-board {
