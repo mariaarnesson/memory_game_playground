@@ -22,6 +22,7 @@
 
 - [Javascript Validator](https://jshint.com/)
     - ![JS Validator](assets/images/validator_jshint.png)
+    The reason for the unused variables: "changeBackgroundYellow", "changeBackgroundBlue", "changeBackgroundGrey", "changeBackgroundWhite", "startPage" and "restartGame"  message is that the functions are declared in HTML file.
 
 
 

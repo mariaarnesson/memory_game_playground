@@ -2,7 +2,6 @@ const cards = document.querySelectorAll('.memory-card');
 const counter = document.querySelector(".moves");
 const matchSound = document.getElementById("matchSound");
 const flipCardSound = document.getElementById("flipCardSound");
-const gameOverSound = document.getElementById("gemaOverSound");
 const gameover = document.getElementById('gameOverModal');
 const instructionCloseBtn = document.getElementsByClassName('closeInstruction')[0];
 const gameoverCloseBtn = document.getElementsByClassName('close')[0];
@@ -25,14 +24,6 @@ var btn = document.getElementById("instructionButton");
   // This is a function with which the user pressing the button
   // "game instruction" can open a modal showing us the text with
   // the instructions of the game.
-  function gameInstruction() {
-    var x = document.getElementById("instruction");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
 
   btn.onclick = function() {
     instruction.style.display = "block";
@@ -99,13 +90,6 @@ var btn = document.getElementById("instructionButton");
   function playFlipCardSound() {
     flipCardSound.currentTime = 0;
     flipCardSound.play();
-  }
-
-  // Thanks to this function, after the end of the game,
-  // the user should hear a sound.
-  function playGameOverSound () {
-    gameOverSound.currentTime = 0;
-    gameOverSound.play();
   }
 
   // This function was borrowed from this site:
