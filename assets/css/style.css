@@ -13,7 +13,7 @@ body {
 }
 h1 {
 	font-family: fantasy;
-  font-size: 6em;
+  font-size: 5em;
   color: tomato;
   text-align: center;
 }
@@ -219,7 +219,7 @@ button {
       width: 80%;
     }  
     .score-panel {
-      left: -76%;
+      left: -90%;
     }
     .game-panel {
 
@@ -241,6 +241,4 @@ button {
   .score-panel {
     margin-left: 18em;
   }
-
- 
   }
