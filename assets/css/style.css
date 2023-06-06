@@ -239,11 +239,11 @@ button {
 
   @media screen and (min-width: 760px) {
 .score-panel {
-  margin-left: 13em;
+  margin-left: 26em;
 }
 
 h1 {
-  font-size: 9em;
+  font-size: 3em;
 }
   }
 
