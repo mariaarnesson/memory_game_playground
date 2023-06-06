@@ -237,12 +237,12 @@ button {
     }
   }
 
-  @media screen and (max-width: 760px) {
+  @media screen and (min-width: 760px) {
 .score-panel {
   margin-left: 31em;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 9em;
 }
   }
