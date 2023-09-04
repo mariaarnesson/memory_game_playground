@@ -152,8 +152,8 @@ p {
 
 button {
 	  display: inline-block;
-    padding: 3px 18px;
-    font-size: 10px;
+    padding: 10px 32px;
+    font-size: 100%;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
